@@ -152,9 +152,9 @@ def turn(board)
   input = gets.strip
   input = input_to_index(input)
   player_token = current_player()
-    if valid_move?(board, place)
+    if valid_move?(board, input)
         move(board, input, player_token)
-    elsif !valid_move?(array, place)
+    elsif !valid_move?(array, input)
         turn(board)
     end
         return display_board(board)
