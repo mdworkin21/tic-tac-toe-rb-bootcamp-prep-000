@@ -184,13 +184,10 @@ def turn(board)
 
 
 def play(board)
-    counter = 0
-
 #loops until the game is over
 
-    while over?(board) == false
+    while !over?(board)
       turn(board)
-      counter+= 1
     end
 
 #When game is over, it tells players who won (or whether it was a draw)
