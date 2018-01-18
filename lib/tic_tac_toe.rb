@@ -147,17 +147,17 @@ end
 
 
 def turn(board)
-  display_board(board)
+
   puts "Please enter 1-9:"
   input = gets.strip
   input = input_to_index(input)
   player_token = current_player()
-    if valid_move?(board, input)
-        move(board, input, player_token)
-    elsif !valid_move?(array, input)
+
+  if !valid_move?(array, input)
         turn(board)
     end
-        return display_board(board)
+    move(board, input, player_token)
+    display_board(board)
 
  end
 
