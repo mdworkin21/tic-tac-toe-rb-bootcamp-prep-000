@@ -153,7 +153,7 @@ def turn(board)
   input = input_to_index(input)
   player_token = current_player()
 
-  if !valid_move?(array, input)
+  if !valid_move?(board, input)
         turn(board)
     end
     move(board, input, player_token)
